@@ -27,10 +27,22 @@ plus the files it wrote in `work/`.
 
 ## The deployed service
 
-`deploy/` is the FastAPI service from P07 packed with the Dockerfile from
-P08, set up for Render (`render.yaml`). It reads the port from `$PORT`.
+`deploy/` is the FastAPI service from P07. It is deployed on FastAPI Cloud:
 
-Run it locally:
+**https://delivery-api-s24cseu1052.fastapicloud.dev/docs**
+
+`pyproject.toml` and `.python-version` (Python 3.12) are what FastAPI Cloud
+builds from; `Dockerfile` (from P08) runs the same service in a container and
+reads the port from `$PORT`.
+
+Deploy again after a change:
+
+```bash
+cd deploy
+fastapi deploy
+```
+
+Run it locally with Docker:
 
 ```bash
 cd deploy

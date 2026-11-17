@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: delivery-api-s24cseu1052
-    runtime: docker
-    plan: free
-    rootDir: deploy
-    dockerfilePath: ./Dockerfile
-    healthCheckPath: /health
